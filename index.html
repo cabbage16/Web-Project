@@ -5,10 +5,84 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="slide.css">
+    <link rel="stylesheet" href="auto_slide.css">
 </head>
 <body>
-    
+    <ul class="menu">
+        <li>
+            <a href="#">menu1</a>
+            <ul class="submenu">
+                <li><a href="#">submenu1</a></li>
+                <li><a href="#">submenu2</a></li>
+                <li><a href="#">submenu3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">menu2</a>
+            <ul class="submenu">
+                <li><a href="#">submenu1</a></li>
+                <li><a href="#">submenu2</a></li>
+                <li><a href="#">submenu3</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">menu3</a>
+            <ul class="submenu">
+                <li><a href="#">submenu1</a></li>
+                <li><a href="#">submenu2</a></li>
+                <li><a href="#">submenu3</a></li>
+            </ul>
+        </li>
+    </ul>
+    <br>
+    <div class="section">
+        <input type="radio" name="slide" id="slide1" checked>
+        <input type="radio" name="slide" id="slide2">
+        <input type="radio" name="slide" id="slide3">
+        <input type="radio" name="slide" id="slide4">
+        <input type="radio" name="slide" id="slide5">
+        <div class="slidewrap">
+            <ul class="slidelist">
+                <li>
+                    <a>
+                        <label for="slide5" class="left"></label>
+                        <img src="./img/slide1.jpg">
+                        <label for="slide2" class="right"></label>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <label for="slide1" class="left"></label>
+                        <img src="./img/slide2.jpg">
+                        <label for="slide3" class="right"></label>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <label for="slide2" class="left"></label>
+                        <img src="./img/slide3.webp">
+                        <label for="slide4" class="right"></label>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <label for="slide3" class="left"></label>
+                        <img src="./img/slide4.jpg">
+                        <label for="slide5" class="right"></label>
+                    </a>
+                </li>
+                <li>
+                    <a>
+                        <label for="slide4" class="left"></label>
+                        <img src="./img/slide5.webp">
+                        <label for="slide1" class="right"></label>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
