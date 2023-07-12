@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 ul, li {list-style: none;}
-[name="slide"] {display: none;}
+[name="auto-slide"] {display: none;}
 .slidebox {
     max-width: 1000px;
     width: 100%;
@@ -18,7 +18,7 @@ ul, li {list-style: none;}
     overflow: hidden;
     margin: 0 auto;
 }
-.slidebox .slidelist {
+.slidebox .auto-slidelist {
     white-space: nowrap;
     font-size: 0;
     overflow: hidden;
@@ -39,29 +39,28 @@ ul, li {list-style: none;}
     border-radius: 50%;
     cursor: pointer;
 }
-label.left {
+label.auto-left {
     left: 20px;
     background-color: #5f5f5f;
-    background-image: url(../img/left.png);
+    background-image: url(../img/UI/left.png);
     background-position: center center;
     background-size: 50%;
     background-repeat: no-repeat;
 }
-label.right {
+label.auto-right {
     right: 20px;
     background-color: #5f5f5f;
-    background-image: url(../img/right.png);
+    background-image: url(../img/UI/right.png);
     background-position: center center;
     background-size: 50%;
     background-repeat: no-repeat;
 }
-[id="slide1"]:checked ~ .slidelist .slideitem {transform: translateX(0%);}
-[id="slide2"]:checked ~ .slidelist .slideitem {transform: translateX(-100%);}
-[id="slide3"]:checked ~ .slidelist .slideitem {transform: translateX(-200%);}
-[id="slide4"]:checked ~ .slidelist .slideitem {transform: translateX(-300%);}
-[id="slide5"]:checked ~ .slidelist .slideitem {transform: translateX(-400%);}
-
-@keyframes slide1 {
+[id="auto-slide1"]:checked ~ .auto-slidelist .slideitem {transform: translateX(0%);}
+[id="auto-slide2"]:checked ~ .auto-slidelist .slideitem {transform: translateX(-100%);}
+[id="auto-slide3"]:checked ~ .auto-slidelist .slideitem {transform: translateX(-200%);}
+[id="auto-slide4"]:checked ~ .auto-slidelist .slideitem {transform: translateX(-300%);}
+[id="auto-slide5"]:checked ~ .auto-slidelist .slideitem {transform: translateX(-400%);}
+@keyframes auto-slide1 {
     0% {left: 0%;}
     18% {left: 0%;}
     20% {left: -100%;}
@@ -74,12 +73,11 @@ label.right {
     98% {left: -400%;}
     100% {left: 0%;}
 }
-[id="slide1"]:checked ~ .slidelist .slideitem {
+[id="auto-slide1"]:checked ~ .auto-slidelist .slideitem {
     transform: translateX(0);
-    animation: slide1 20s infinite;
+    animation: auto-slide1 20s infinite;
 }
-
-@keyframes slide2 {
+@keyframes auto-slide2 {
     0% {left: 0%;}
     18% {left: 0%;}
     20% {left: -100%;}
@@ -92,12 +90,11 @@ label.right {
     98% {left: 100%;}
     100% {left: 0%;}
 }
-[id="slide2"]:checked ~ .slidelist .slideitem {
+[id="auto-slide2"]:checked ~ .auto-slidelist .slideitem {
     transform: translateX(-100%);
-    animation: slide2 20s infinite;
+    animation: auto-slide2 20s infinite;
 }
-
-@keyframes slide3 {
+@keyframes auto-slide3 {
     0% {left: 0%;}
     18% {left: 0%;}
     20% {left: -100%;}
@@ -110,12 +107,11 @@ label.right {
     98% {left: 100%;}
     100% {left: 0%;}
 }
-[id="slide3"]:checked ~ .slidelist .slideitem {
+[id="auto-slide3"]:checked ~ .auto-slidelist .slideitem {
     transform: translateX(-200%);
-    animation: slide3 20s infinite;
+    animation: auto-slide3 20s infinite;
 }
-
-@keyframes slide4 {
+@keyframes auto-slide4 {
     0% {left: 0%;}
     18% {left: 0%;}
     20% {left: -100%;}
@@ -128,12 +124,11 @@ label.right {
     98% {left: 100%;}
     100% {left: 0%;}
 }
-[id="slide4"]:checked ~ .slidelist .slideitem {
+[id="auto-slide4"]:checked ~ .auto-slidelist .slideitem {
     transform: translateX(-300%);
-    animation: slide4 20s infinite;
+    animation: auto-slide4 20s infinite;
 }
-
-@keyframes slide5 {
+@keyframes auto-slide5 {
     0% {left: 0%;}
     18% {left: 0%;}
     20% {left: 400%;}
@@ -146,7 +141,7 @@ label.right {
     98% {left: 100%;}
     100% {left: 0%;}
 }
-[id="slide5"]:checked ~ .slidelist .slideitem {
+[id="auto-slide5"]:checked ~ .auto-slidelist .slideitem {
     transform: translateX(-400%);
-    animation: slide5 20s infinite;
+    animation: auto-slide5 20s infinite;
 }

@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  #content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  #image {
+    margin-bottom: 20px;
+  }
+
+  #image img {
+    width: 300px;
+    height: auto;
+  }
+
+  #description {
+    text-align: center;
+  }

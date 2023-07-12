@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Let'sTrip</title>
     <link rel="stylesheet" href="./css/auto-slide.css">
     <link rel="stylesheet" href="./css/menu.css">
     <link rel="stylesheet" href="./css/slide.css">
+    <link rel="stylesheet" href="./css/sytle.css">
 </head>
 <body>
+    <header>
+        <a href="#"><img src="./img/UI/Logo.png" class="logo"></a>
+        <input type="text" id="search">
+        <button id="searchBtn">검색</button>
+    </header>
     <ul class="menu">
         <li>
             <a href="#">menu1</a>
@@ -36,50 +42,95 @@
             </ul>
         </li>
     </ul>
-    <div class="slidebox">
-        <input type="radio" name="slide" id="slide1" checked>
-        <input type="radio" name="slide" id="slide2">
-        <input type="radio" name="slide" id="slide3">
-        <input type="radio" name="slide" id="slide4">
-        <input type="radio" name="slide" id="slide5">
-        <ul class="slidelist">
-            <li class="slideitem">
-                <div>
-                    <label for="slide5" class="left"></label>
-                    <a><img src="./img/slide1.jpg"></a>
-                    <label for="slide2" class="right"></label>
-                </div>
-            </li>
-            <li class="slideitem">
-                <div>
-                    <label for="slide1" class="left"></label>
-                    <label for="slide3" class="right"></label>
-                    <a><img src="./img/slide2.jpg"></a>
-                </div>
-            </li>
-            <li class="slideitem">
-                <div>
-                    <label for="slide2" class="left"></label>
-                    <label for="slide4" class="right"></label>
-                    <a><img src="./img/slide3.webp"></a>
-                </div>
-            </li>
-            <li class="slideitem">
-                <div>
-                    <label for="slide3" class="left"></label>
-                    <label for="slide5" class="right"></label>
-                    <a><img src="./img/slide4.jpg"></a>
-                </div>
-            </li>
-            <li class="slideitem">
-                <div>
-                    <label for="slide4" class="left"></label>
-                    <label for="slide1" class="right"></label>
-                    <a><img src="./img/slide5.webp"></a>
-                </div>
-            </li>
-        </ul>
+    <div id="container">
+        <div class="slidebox">
+            <input type="radio" name="auto-slide" id="auto-slide1" checked>
+            <input type="radio" name="auto-slide" id="auto-slide2">
+            <input type="radio" name="auto-slide" id="auto-slide3">
+            <input type="radio" name="auto-slide" id="auto-slide4">
+            <input type="radio" name="auto-slide" id="auto-slide5">
+            <ul class="auto-slidelist">
+                <li class="slideitem">
+                    <div>
+                        <label for="auto-slide5" class="auto-left"></label>
+                        <label for="auto-slide2" class="auto-right"></label>
+                        <a><img src="./img/slide/slide1.jpg"></a>
+                    </div>
+                </li>
+                <li class="slideitem">
+                    <div>
+                        <label for="auto-slide1" class="auto-left"></label>
+                        <label for="auto-slide3" class="auto-right"></label>
+                        <a><img src="./img/slide/slide2.jpg"></a>
+                    </div>
+                </li>
+                <li class="slideitem">
+                    <div>
+                        <label for="auto-slide2" class="auto-left"></label>
+                        <label for="auto-slide4" class="auto-right"></label>
+                        <a><img src="./img/slide/slide3.webp"></a>
+                    </div>
+                </li>
+                <li class="slideitem">
+                    <div>
+                        <label for="auto-slide3" class="auto-left"></label>
+                        <label for="auto-slide5" class="auto-right"></label>
+                        <a><img src="./img/slide/slide4.jpg"></a>
+                    </div>
+                </li>
+                <li class="slideitem">
+                    <div>
+                        <label for="auto-slide4" class="auto-left"></label>
+                        <label for="auto-slide1" class="auto-right"></label>
+                        <a><img src="./img/slide/slide5.webp"></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <h2>인기 여행지</h2>
+        <p>전 세계의 인기 여행지.</p>
+        <br>
+        <div class="section">
+            <input type="radio" name="slide" id="slide1" checked>
+            <input type="radio" name="slide" id="slide2">
+            <input type="radio" name="slide" id="slide3">
+            <input type="radio" name="slide" id="slide4">
+            <input type="radio" name="slide" id="slide5">
+            <input type="radio" name="slide" id="slide6">
+            <input type="radio" name="slide" id="slide7">
+            <div class="slidewrap">
+                <ul class="slidelist">
+                    <li>
+                        <a href="City-info/Barcelona.html"><img src="./img/City/Barcelona.jpg"></a>
+                    </li>
+                    <li>
+                        <a href="City-info/Hawaii.html"><img src="./img/City/Hawaii.jpg"></a>
+                    </li>
+                    <li>
+                        <a href="City-info/London.html"><img src="./img/City/London.jpg"></a>
+                    </li>
+                    <li>
+                        <a href="City-info/Miami.html"><img src="./img/City/Miami.jpg"></a>
+                    </li>
+                    <li>
+                        <a href="City-info/Paris.html"><img src="./img/City/Paris.jpg"></a>
+                    </li>
+                    <li>
+                        <a href="City-info/Rome.html"><img src="./img/City/Rome.jpg"></a>
+                    </li>
+                    <li>
+                        <a href="City-info/Venis.html"><img src="./img/City/Venis.jpg"></a>
+                    </li>
+                </ul>
+                <label id="left"></label>
+                <label id="right"></label>
+            </div>
+        </div>
     </div>
-    <script src="main.js"></script>
+    <footer class="foot">
+        <br>
+        <a href="https://www.flaticon.com/kr/free-icons/" title="여행 아이콘">여행 아이콘  제작자: Freepik - Flaticon</a>
+    </footer>
+    <script src="./javascript/search.js"></script>
 </body>
 </html>
