@@ -2,36 +2,79 @@ var cities = [
     {
         id: 1,
         name: "바르셀로나",
-        url: './img/City/Barcelona.jpg'
+        img: './img/City/Barcelona/Barcelona1.jpg',
+        url: './City-info/Barcelona.html'
     },
     {
         id: 2,
         name: "하와이",
-        url: './img/City/Hawaii.jpg'
+        img: './img/City/Hawaii/Hawaii1.jpg',
+        url: './City-info/Hawaii.html'
     },
     {
         id: 3,
         name: "런던",
-        url: './img/City/London.jpg'
+        img: './img/City/London/London1.jpg',
+        url: './City-info/London.html'
     },
     {
         id: 4,
         name: "마이애미",
-        url: './img/City/Miami.jpg'
+        img: './img/City/Miami/Miami1.jpg',
+        url: './City-info/Miami.html'
     },
     {
         id: 5,
         name: "파리",
-        url: './img/City/Paris.jpg'
+        img: './img/City/Paris/Paris1.jpg',
+        url: './City-info/Paris.html'
     },
     {
         id: 6,
         name: "로마",
-        url: './img/City/Rome.jpg'
+        img: './img/City/Rome/Rome1.jpg',
+        url: './City-info/Rome.html'
     },
     {
         id: 7,
         name: "베니스",
-        url: './img/City/Venis.jpg'
+        img: './img/City/Venis/Venis1.jpg',
+        url: './City-info/Venis.html'
     },
 ]
+
+const list = document.getElementById('list');
+
+function showList(val='') {
+    list.innerHTML = '';
+    if (val === '') {
+        return;
+    }
+    cities.forEach(city => {
+        if(city.name.includes(val)) {
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <img src='${city.img}' alt='${city.name} 사진'>
+                <p>${city.name}</p>
+            `;
+            list.appendChild(li);
+        }
+    });
+}
+
+showList();
+const searchInput = document.getElementById('search');
+const searchBtn = document.getElementById('searchBtn');
+
+searchBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const val = searchInput.value;
+    showList(val);
+});
+
+searchInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        const val = searchInput.value;
+        showList(val);
+    }
+});
