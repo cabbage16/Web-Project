@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul, li {list-style: none;}
+[name="slide"] {display: none;}
+.slidebox {
+    max-width: 1000px;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.slidebox img {
+    display: block;
+    max-width: 100%;
+    max-height: 700px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.slidebox .slidelist {
+    white-space: nowrap;
+    font-size: 0;
+    overflow: hidden;
+}
+.slidebox .slideitem {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    transition: all .25s;
+}
+.slidebox .slideitem label {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+label.left {
+    left: 20px;
+    background-color: #5f5f5f;
+    background-image: url(../img/left.png);
+    background-position: center center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+label.right {
+    right: 20px;
+    background-color: #5f5f5f;
+    background-image: url(../img/right.png);
+    background-position: center center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+[id="slide1"]:checked ~ .slidelist .slideitem {transform: translateX(0%);}
+[id="slide2"]:checked ~ .slidelist .slideitem {transform: translateX(-100%);}
+[id="slide3"]:checked ~ .slidelist .slideitem {transform: translateX(-200%);}
+[id="slide4"]:checked ~ .slidelist .slideitem {transform: translateX(-300%);}
+[id="slide5"]:checked ~ .slidelist .slideitem {transform: translateX(-400%);}
+
+@keyframes slide1 {
+    0% {left: 0%;}
+    18% {left: 0%;}
+    20% {left: -100%;}
+    38% {left: -100%;}
+    40% {left: -200%;}
+    58% {left: -200%;}
+    60% {left: -300%;}
+    78% {left: -300%;}
+    80% {left: -400%;}
+    98% {left: -400%;}
+    100% {left: 0%;}
+}
+[id="slide1"]:checked ~ .slidelist .slideitem {
+    transform: translateX(0);
+    animation: slide1 20s infinite;
+}
+
+@keyframes slide2 {
+    0% {left: 0%;}
+    18% {left: 0%;}
+    20% {left: -100%;}
+    38% {left: -100%;}
+    40% {left: -200%;}
+    58% {left: -200%;}
+    60% {left: -300%;}
+    78% {left: -300%;}
+    80% {left: 100%;}
+    98% {left: 100%;}
+    100% {left: 0%;}
+}
+[id="slide2"]:checked ~ .slidelist .slideitem {
+    transform: translateX(-100%);
+    animation: slide2 20s infinite;
+}
+
+@keyframes slide3 {
+    0% {left: 0%;}
+    18% {left: 0%;}
+    20% {left: -100%;}
+    38% {left: -100%;}
+    40% {left: -200%;}
+    58% {left: -200%;}
+    60% {left: 200%;}
+    78% {left: 200%;}
+    80% {left: 100%;}
+    98% {left: 100%;}
+    100% {left: 0%;}
+}
+[id="slide3"]:checked ~ .slidelist .slideitem {
+    transform: translateX(-200%);
+    animation: slide3 20s infinite;
+}
+
+@keyframes slide4 {
+    0% {left: 0%;}
+    18% {left: 0%;}
+    20% {left: -100%;}
+    38% {left: -100%;}
+    40% {left: 300%;}
+    58% {left: 300%;}
+    60% {left: 200%;}
+    78% {left: 200%;}
+    80% {left: 100%;}
+    98% {left: 100%;}
+    100% {left: 0%;}
+}
+[id="slide4"]:checked ~ .slidelist .slideitem {
+    transform: translateX(-300%);
+    animation: slide4 20s infinite;
+}
+
+@keyframes slide5 {
+    0% {left: 0%;}
+    18% {left: 0%;}
+    20% {left: 400%;}
+    38% {left: 400%;}
+    40% {left: 300%;}
+    58% {left: 300%;}
+    60% {left: 200%;}
+    78% {left: 200%;}
+    80% {left: 100%;}
+    98% {left: 100%;}
+    100% {left: 0%;}
+}
+[id="slide5"]:checked ~ .slidelist .slideitem {
+    transform: translateX(-400%);
+    animation: slide5 20s infinite;
+}
