@@ -16,3 +16,21 @@
 .foot a {
     text-decoration: none;
 }
+.search-box{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    padding: 40px;
+    height: 50px;
+    background-color: #fff;
+    border: 1px solid #51e3d4;
+    border-radius: 100%;
+    transition: 0.4s;
+    width: 50px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+.search-box:hover{
+    box-shadow: 0px 0px .5px 1px #51e3d4;
+    background-color: #0BC95F;
+}

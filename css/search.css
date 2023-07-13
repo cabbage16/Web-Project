@@ -4,20 +4,32 @@
 ul {
     list-style-type: none;
 }
-input, buttonj {
+input, button {
     padding: 5px 10px;
 }
 #list {
     border: 1px solid #ccc;
     padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: block;
 }
 #list > li {
-    flex-basis: 48%;
     margin-bottom: 20px;
+    border: 1px solid #ccc;
 }
-#list > li > img {
-    width: 60%;
+#list > li > a > img {
+    width: 150px;
+    height: auto;
+}
+#list > li > a {
+    text-decoration: none;
+    color: black;
+}
+.city-name {
+    font-size: large;
+}
+#list > li.error-message {
+    border: none;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
 }

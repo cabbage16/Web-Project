@@ -47,19 +47,32 @@ const list = document.getElementById('list');
 
 function showList(val='') {
     list.innerHTML = '';
+    let hasResults = false;
+    
     if (val === '') {
         return;
     }
+    
     cities.forEach(city => {
         if(city.name.includes(val)) {
             const li = document.createElement('li');
             li.innerHTML = `
-                <img src='${city.img}' alt='${city.name} 사진'>
-                <p>${city.name}</p>
+                <a href="${city.url}">
+                    <img src='${city.img}' alt='${city.name} 사진'>
+                    <span class="city-name">${city.name}</span>
+                </a>
             `;
             list.appendChild(li);
+            hasResults = true;
         }
     });
+
+    if (!hasResults) {
+        const li = document.createElement('li');
+        li.textContent = '해당하는 결과가 없습니다.';
+        li.classList.add('error-message'); // error 메시지에 클래스 추가
+        list.appendChild(li);
+    }
 }
 
 showList();
@@ -68,7 +81,7 @@ const searchBtn = document.getElementById('searchBtn');
 
 searchBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    const val = searchInput.value;
+    var val = searchInput.value;
     showList(val);
 });
 
