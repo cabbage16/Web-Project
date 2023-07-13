@@ -18,7 +18,9 @@
     display: block;
     position: relative;
 }
+
 .section .slidelist > li > a img {width: 100%;}
+
 .section .slidelist label {
     position: absolute;
     z-index: 10;
