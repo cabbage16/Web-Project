@@ -16,6 +16,9 @@
 .foot a {
     text-decoration: none;
 }
+.foot > * {
+    margin: 30px;
+}
 .search-box{
     display: flex;
     justify-content: center;
